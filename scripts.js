@@ -10,8 +10,9 @@ $(document).ready(function() {
   function buttonClick() {
       $(".welcome").text("Button clicked");
   }
-  
+
 });
+
 
 //Programming and Logic Challenges
 
@@ -27,25 +28,45 @@ console.log(multiply(3, 5));
 
 //use a for loop to go through the array and add each number to the total as it
 //goes through the loop
-var array = [2,3,4];
-function total(arrayTotal) {
-  var add = 0;
-  for (i = 0; i < arrayTotal.length; i++) {
-  add += arrayTotal[i];
-  }
+//the code as it doesn't currently work.
+
+// var array = [2,3,4];
+// function total(arrayTotal) {
+//   var add = 0; //to define add
+//   for (i = 0; i < arrayTotal.length; i++) {
+//   add += arrayTotal[i];
+//   }
+// }
+// console.log(total(array));
+
+//using resources, I found this code from w3resources.
+function sum(input) {
+  if (toString.call(input) !== '[object Array]')
+  return false;
+    var total = 0;
+    for (var i=0; i<input.length; i++) {
+      if(isNaN(input[i])) {
+        continue;
+      }
+    total += Number(input[i]);
+    }
+    return total;
 }
-console.log(total(array));
+console.log(sum([1,2,3]));
+
+
 
 // 3. Write a funtion that take an array of strings as a parameter and uses a loop
 //to determin if the array contains the string 'blue'. The function should return
 //true or false depending on whether the array contains 'blue'
 
 //using a loop to go through the array to if the array contains the color "blue"
-var colorsArray = ['red','green'];
+
+var colorsArray = ['red','blue','green'];
 
 function containsBlue(array) {
   for (i=0; i < array.length; i++) {
-    if (array[i].color == 'blue') {
+    if (array.includes('blue')) {
       return true;
     } else {
       return false;
@@ -68,11 +89,11 @@ console.log(returnString(animal, color));
 // 5. function that take in two strings, make and model, and returns an object
 // that has the propeties make and model.
 
-// function car() {
-//
-//   var car1 = {
-//     make: "Ford",
-//     model: "Taurus"
-//   };
-// }
-// console.log(car(make, model));
+function car() {
+
+  var car1 = {
+    make: "Ford",
+    model: "Taurus"
+  };
+}
+console.log(car(make, model));
