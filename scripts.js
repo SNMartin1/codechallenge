@@ -95,5 +95,6 @@ function car() {
     make: "Ford",
     model: "Taurus"
   };
+  return car1;
 }
-console.log(car(make, model));
+console.log(car());
