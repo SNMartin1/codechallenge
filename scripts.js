@@ -1,5 +1,18 @@
 console.log("js sourced");
 
+//getting document ready using jquery
+$(document).ready(function() {
+
+  (console.log('in ready function'));
+  $(".welcome").text("The page has loaded.");
+  $('#submit-btn').on('click', buttonClick);
+
+  function buttonClick() {
+      $(".welcome").text("Button clicked");
+  }
+  
+});
+
 //Programming and Logic Challenges
 
 //1. function that takes two arguments and return the value of the results for
@@ -52,13 +65,14 @@ function returnString(animal, color) {
 }
 console.log(returnString(animal, color));
 
+// 5. function that take in two strings, make and model, and returns an object
+// that has the propeties make and model.
 
-
-//getting document ready using jquery
-$(document).ready(function() {
-  (console.log('in ready function'));
-
-
-
-
-});
+// function car() {
+//
+//   var car1 = {
+//     make: "Ford",
+//     model: "Taurus"
+//   };
+// }
+// console.log(car(make, model));
